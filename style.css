@@ -1,0 +1,192 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.okvir {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.img-resp {
+    width: 100%;
+}
+
+.img-cur {
+    border-radius: 15px;
+}
+
+.txtdesno {
+    text-align: right;
+}
+
+.txtc {
+    text-align: center;
+}
+
+.txtlevo {
+    text-align: left;
+}
+
+.txtw {
+    color: white;
+}
+
+.wtxt {
+    color: white;
+}
+
+.providno {
+    clear: both;
+    float: none;
+}
+
+a {
+    color: #ff6b81;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4757;
+}
+
+.btn {
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.dugme-pretraga {
+    background-color: #ff6b81;
+    color: white;
+    cursor: pointer;
+}
+
+.dugme-pretraga:hover {
+    color: white;
+    background-color: #ff4757;
+}
+
+h2 {
+    color: #2f3542;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.plutajuci {
+    position: relative;
+}
+
+.ftxt {
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+
+fieldset {
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+
+
+/* CSSS ya meni */
+
+.logo {
+    width: 10%;
+    float: left;
+}
+
+.meni {
+    line-height: 60px;
+}
+
+.meni ul {
+    list-style-type: none;
+}
+
+.meni ul li {
+    display: inline;
+    padding: 1%;
+    font-weight: bold;
+}
+
+
+/* CSS ya pretragu */
+
+.pretraga-krofni {
+    background-image: url('../krofne/slike/sprinklesjpg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7% 0;
+}
+
+
+
+.pretraga-krofni input[type="search"] {
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* CSS za kategorije */
+.kategorije {
+    padding: 4% 0;
+}
+
+.b3 {
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+
+
+/* CSS ya jelovnik */
+.jelovnik {
+    background-color: #ececec;
+    padding: 4% 0;
+}
+
+.jelovnik-box {
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.jelovnik-slike {
+    width: 20%;
+    float: left;
+}
+
+.jelovnik-desc {
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+
+
+.jelovnik-cena {
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+
+.jelovnik-cena {
+    font-size: 1rem;
+    color: #747d8c;
+}
