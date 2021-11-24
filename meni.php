@@ -11,39 +11,8 @@
 
 <body>
 
-    <!-- meni počinje -->
-    <section class="meni">
-        <div class="okvir">
-            <div class="logo">
-                <a href="#" title="Logo">
-                    <img src="slike/logo1.jpg" alt="Logo restorana" class="img-resp">
-                </a>
-            </div>
+<?php include 'header.php'; ?>   
 
-            <div class="meni txtdesno">
-                <ul>
-                    <li>
-                        <a href="index.html">Pocetna</a>
-                    </li>
-                    <li>
-                        <a href="kategorije.html">Kategorije</a>
-                    </li>
-                    <li>
-                        <a href="meni.html">Krofne</a>
-                    </li>
-                    <li>
-                        <a href="#.html">c</a>
-                    </li>
-                </ul>
-
-            </div>
-
-            <div class="providno"></div>
-
-        </div>
-
-    </section>
-    <!-- meni se završava -->
     <!-- pretraga pocinje -->
 
     <section class="pretraga-krofni txtc">
