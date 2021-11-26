@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -15,130 +18,34 @@
 
 <?php include 'header.php'; ?>
 
+<div class='container'>
+        <div class="row mt-2">
+            <div class="col-3">
+                <select id='sort' class="form-control">
+                    <option value="">Sortiraj po nazivu</option>
+                    <option value="ASC">po abecedi</option>
+                    <option value="DESC">unazad</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <input type="text" id='nazivFil' class="form-control" placeholder="Filtriraj po nazivu">
+            </div>
+            <div class="col-3">
+                <select id='kateg' class="form-control">
+                    <option value="0">Filtriraj po kategoriji</option>
 
-
-    <!-- pretraga pocinje -->
-
-    <section class="pretraga-krofni txtc  poz">
-        <div class="okvir">
-            <form action="krofne-pretraga.html" method="post">
-                <input type="search" name="search" placeholder="Pretrazi krofne..." required>
-                <input type="submit" name="submit" value="Pretrazi" class="btn dugme-pretraga">
-            </form>
+                </select>
+            </div>
         </div>
-    </section>
-    <!-- pretraga se završava -->
-
-    <!-- kategorije pocinju -->
-    <section class="kategorije">
-        <div class="okvir">
-            <h2 class="txtc"> Pretrazi kategorije</h2>
-            <a href="kategorije-krofni.html">
-                <div class="plutajuci b3">
-                    <img src="slike/Cokolada.jpeg" alt="Cokoladna krofna" class="img-resp img-cur">
-
-                </div>
-            </a>
-            <a href="#">
-                <div class="plutajuci b3">
-                    <img src="slike/Voce.jpeg" alt="Vocna krofna" class="img-resp img-cur">
-
-
-                </div>
-            </a>
-            <a href="#">
-                <div class="plutajuci b3">
-                    <img src="slike/Vanila.jpeg" alt="Krofna od vanile" class="img-resp img-cur">
-
-
-                </div>
-            </a>
+        <div id='elementi'>
 
         </div>
-    </section>
-
-    <!-- kategorije se završavaju -->
-    <!-- meni pocinje -->
-    <section class="jelovnik">
-        <div class="okvir">
-            <h2 class="txtc"> Jelovnik</h2>
-
-            <div class="jelovnik-box">
-                <div class="jelovnik-slike">
-                    <img src="slike/cokoladna-krofna-ferero.png" alt="Krofna1" class="img-resp img-cur">
-
-                </div>
-
-                <div class="jelovnik-desc">
-                    <h4>Krofna1</h4>
-                    <p class="jelovnik-cena">300din</p>
-                    <p class="jelovnik-opis"> crna cokolada sa keksom</p>
-
-                    <br>
-
-                    <a href="poruci.html" class="btn dugme-pretrazi">Poruci sada</a>
-                </div>
-
-            </div>
-
-            <div class="jelovnik-box">
-                <div class="jelovnik-slike">
-                    <img src="slike/nutelofna.png" alt="Krofna2" class="img-resp img-cur">
-
-                </div>
-
-                <div class="jelovnik-desc">
-                    <h4>Krofna2</h4>
-                    <p class="jelovnik-cena">200din</p>
-                    <p class="jelovnik-opis"> crna cokolada sa bombonama</p>
-
-                    <br>
-
-                    <a href="#" class="btn dugme-pretrazi">Poruci sada</a>
-                </div>
-
-            </div>
-
-            <div class="jelovnik-box">
-                <div class="jelovnik-slike">
-                    <img src="slike/bakina.png" alt="Krofna3" class="img-resp img-cur">
-
-                </div>
-
-                <div class="jelovnik-desc">
-                    <h4>Krofna3</h4>
-                    <p class="jelovnik-cena">150din</p>
-                    <p class="jelovnik-opis"> bela cokolada sa bombonama</p>
-
-                    <br>
-
-                    <a href="#" class="btn dugme-pretrazi">Poruci sada</a>
-                </div>
-
-            </div>
+    </div>
 
 
-            <div class="jelovnik-box">
-                <div class="jelovnik-slike">
-                    <img src="slike/lemonberry.png" alt="Krofna4" class="img-resp img-cur">
+    
 
-                </div>
-
-                <div class="jelovnik-desc">
-                    <h4>Krofna1</h4>
-                    <p class="jelovnik-cena">200din</p>
-                    <p class="jelovnik-opis"> sumsko voce</p>
-
-                    <br>
-
-                    <a href="#" class="btn dugme-pretrazi">Poruci sada</a>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-    <!-- meni se završava -->
+ 
 </body>
 
 </html>

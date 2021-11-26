@@ -15,7 +15,7 @@
                         <a href="kategorije.php">Kategorije</a>
                     </li>
                     <li>
-                        <a href="meni.php">Krofne</a>
+                        <a href="napraviKrofnu.php">Napravi svoju krofnu</a>
                     </li>
                     <li>
                         <a href="#.php">c</a>
