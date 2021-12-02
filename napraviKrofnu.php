@@ -28,15 +28,16 @@
 
         <div class="row mt-2   pretraga-krofni">
             <div class="col-8 bg-light  okvir">
-                <form action="" method="post" enctype="multipart/form-data" size='200'>
-                    <!-- kada napravis putanju dodaj posle !-->
+                <form action="./server/krofna/kreiraj.php" method="post" enctype="multipart/form-data" size='200'>
+                    
+               
                     <label>Naziv</label>
                     <input type="text" required class="form-control" name="naziv">
                     <label>Kalorije</label>
                     <input type="number" required min="0" max="100" class="form-control" name="kalorije">
                     <label>Kategorija</label>
                     <select id='kat' class="form-control" required name='kategorija_id'>
-
+<!-- ovo za popunjavanje ajax-om ! -->
                     </select>
                     <label>Slika</label>
                     <input type="file" required class="form-control" name="slika">
@@ -51,5 +52,37 @@
     </div>
 
     
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+
+
+
+
+    <script>
+        $(document).ready(function () {   // prvo se inicijalizuju svi html elementi a posle se izvršava ovo ispod
+         $.getJSON('./server/kategorja/returnAll.php', function (data) {                  // AJAX POZIV -> putanja,fja
+            // kada napravis putanju dodaj posle 
+
+                console.log(data);    // data je niy svih vrsta koju vraca fja vrati sve 
+                if (!data.status) {
+                    alert(data.error);
+                    return;
+                }
+
+                for (let kateg of data.kolekcija) {
+                    $('#kat').append(`
+                        <option value='${kateg.id}'> ${kateg.naziv} </option>   
+                    `)
+
+                    //u polje sa tagom kat doadjem jednu po jednu kategoriju iy te kolekcije data.kolekcija
+                    // ovom petljom ubacuuemo jednu po jednu kaategoriju u posle kat
+                }
+            })
+        })
+    </script>
+
 </body>
 </html>
+
+<!-- popravi ovo!!! -->
