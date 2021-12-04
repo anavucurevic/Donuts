@@ -42,7 +42,87 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+
+    <script>
+        let krofne = [];
+        $(document).ready(function () {
+            $.getJSON('./server/krofna/returnAll.php', function (data) {
+                if (data.status == 'false') {
+                    alert(data.error);
+                    return;
+                } else {
+                    krofne = data.kolekcija;
+                    ispisi();
+                }
+
+            });
+            $.getJSON('./server/kategorija/returnAll.php', function (data) {
+
+                if (!data.status) {
+                    alert(data.error);
+                    return;
+                }
+
+                for (let kateg of data.kolekcija) {
+                    $('#kateg').append(`
+                        <option value='${kateg.id}'> ${kateg.naziv} </option>
+                    `)
+                }
+            })
+
+            $('#kateg').change(function () {
+                ispisi();
+            })
+            $('#sort').change(function () {
+                ispisi();
+            })
+            $('#nazivFil').change(function () {
+                ispisi();
+            })
+
+        })
+        function ispisi() {
+            const vrsta = $('#kateg').val();
+            const sort = $('#sort').val();
+            const imeFilter = $('#nazivFil').val();
+            const niz = krofne.filter(element => {
+                return (vrsta == 0 || element.kategorija_id == vrsta) && element.ime.startsWith(imeFilter) 
+
+                // proveri ovo ime
+            })
+            niz.sort((a, b) => {
+                if (sort == 'ASC')
+                    return (a.ime.toLowerCase() > b.ime.toLowerCase()) ? 1 : -1;
+                return (a.ime.toLowerCase() > b.ime.toLowerCase()) ? -1 : 1;
+            });
+
+            let red = 0;
+            let kolona = 0;
+            $('#elementi').html(`<div id='row-${red}' class='row mt-2'></div>`)
+            for (let krofna of niz) {
+                if (kolona === 3) {
+                    kolona = 0;
+                    red++;
+                    $('#elementi').append(`<div id='row-${red}' class='row mt-2'></div>`)
+                }
+                $(`#row-${red}`).append(
+                    `
+                        <div class='col-4 pt-2 bg-light'>
+                            <img src='${krofna.slika}' width='100%' height='320' />
+                            <h4 class='text-center'>${krofna.naziv}</h4>
+                            <h5 class='text-center'>${krofna.kategorija_naziv}</h5>  
+                            
+                           <a href='./promena.php?id=${krofna.id}'> <button class='form-control btn btn-success mb-2'>Vidi</button></a>
+                        </div>
+                    `
+                ) // pogledaj ovo sve ove nazive
+            }
+        }
+
+    </script>
     
 
  
