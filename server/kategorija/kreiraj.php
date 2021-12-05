@@ -4,7 +4,7 @@
    
     $naziv=$_POST['naziv'];
     if(!preg_match('/^[a-zA-Z]*$/',$naziv)){
-        header("Location: ../../kategorije.php?greska=Neispravno ime");
+        header("Location: ../../kategorije.php?greska=Neispravan naziv");
     }else{
         $rezultat=$broker->udc("insert into kategorija(naziv) values ('".$naziv."') ");
         if($rezultat['status']){

@@ -4,7 +4,7 @@ $broker=Broker::getBroker();
 
 
 
-$naziv=$_POST['naziv'];
+$ime=$_POST['ime'];
 $kalorije=$_POST['kalorije'];
 $kategorija_id=$_POST['kategorija_id'];
 $slika=$_FILES['slika'];
@@ -22,7 +22,7 @@ if(!move_uploaded_file($_FILES['slika']['tmp_name'],$lokacija)){
     $lokacija=substr($lokacija,4);
 }
 
-$rezultat=$broker->udc("insert into krofna(naziv,kalorije,kategorija_id,slika,recept) values ('".$naziv."',".$kalorije.",".$kategorija_id.",'".$lokacija."','".$recept."') ");
+$rezultat=$broker->udc("insert into krofna(ime,kalorije,kategorija_id,slika,recept) values ('".$ime."',".$kalorije.",".$kategorija_id.",'".$lokacija."','".$recept."') ");
 if($rezultat['status']){
     header("Location: ../../napraviKrofnu.php");
 }else{

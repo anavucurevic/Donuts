@@ -32,7 +32,7 @@
                     
                
                     <label>Naziv</label>
-                    <input type="text" required class="form-control" name="naziv">
+                    <input type="text" required class="form-control" name="ime">
                     <label>Kalorije</label>
                     <input type="number" required min="0" max="100" class="form-control" name="kalorije">
                     <label>Kategorija</label>
@@ -53,7 +53,7 @@
 
     
     <script src="https://code.jquery.com/jquery-3.6.0.js" 
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    ></script>
 
 
 

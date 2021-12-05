@@ -30,7 +30,7 @@
                 <h2>Kreiraj kategoriju</h2>
                 <form class='mb-5' action="./server/kategorija/kreiraj.php" method="post"> 
                     <label>Naziv kategorije</label>
-                    <input type="text" name='ime' class='form-control'>
+                    <input type="text" name='naziv' class='form-control'>
                     <label class='text-danger bg-light' <?php echo (!isset($_GET['greska']))?'hidden':''; ?> ><?php echo $_GET['greska']; ?></label>
                     <button type='submit' class='form-control btn btn-primary mt-2'>Napravi</button>
                 </form>
@@ -41,7 +41,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" 
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   ></script>
 
 
     <script>
@@ -57,7 +57,7 @@
                     $('#elementi').append(`
                         <tr>
                             <td>${kateg.id}</td>
-                            <td>${kaetg.naziv}</td>
+                            <td>${kateg.naziv}</td>
                             <td>
                                 <button class='form-control btn btn-danger' onClick=obrisi(${kateg.id}) >Obrisi</button>
                             </td>

@@ -43,13 +43,14 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" 
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    ></script>
 
 
     <script>
         let krofne = [];
         $(document).ready(function () {
             $.getJSON('./server/krofna/returnAll.php', function (data) {
+                console.log("ispis"+data.ob_get_length);
                 if (data.status == 'false') {
                     alert(data.error);
                     return;
@@ -85,18 +86,18 @@
 
         })
         function ispisi() {
-            const vrsta = $('#kateg').val();
+            const kateg = $('#kateg').val();
             const sort = $('#sort').val();
             const imeFilter = $('#nazivFil').val();
             const niz = krofne.filter(element => {
-                return (vrsta == 0 || element.kategorija_id == vrsta) && element.naziv.startsWith(imeFilter) 
+                return (kateg == 0 || element.kategorija_id == kateg) && element.ime.startsWith(imeFilter) 
 
                 // proveri ovo ime
             })
             niz.sort((a, b) => {
                 if (sort == 'ASC')
-                    return (a.naziv.toLowerCase() > b.naziv.toLowerCase()) ? 1 : -1;
-                return (a.naziv.toLowerCase() > b.naziv.toLowerCase()) ? -1 : 1;
+                    return (a.ime.toLowerCase() > b.ime.toLowerCase()) ? 1 : -1;
+                return (a.ime.toLowerCase() > b.ime.toLowerCase()) ? -1 : 1;
             });
 
             let red = 0;
@@ -112,13 +113,13 @@
                     `
                         <div class='col-4 pt-2 bg-light'>
                             <img src='${krofna.slika}' width='100%' height='320' />
-                            <h4 class='text-center'>${krofna.naziv}</h4>
+                            <h4 class='text-center'>${krofna.ime}</h4>
                             <h5 class='text-center'>${krofna.kategorija_naziv}</h5>  
                             
                            <a href='./promena.php?id=${krofna.id}'> <button class='form-control btn btn-success mb-2'>Vidi</button></a>
                         </div>
                     `
-                ) // pogledaj ovo sve ove nazive
+                ) 
             }
         }
 

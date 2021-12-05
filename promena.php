@@ -58,7 +58,7 @@ $krofna=$rezultat['kolekcija'][0];
             <form action="./server/krofna/izmeni.php" method="post">
             <input type="text" hidden name='id' value='<?php echo $krofna->id;?>'>     
             <label>Naziv</label>
-                <input type="text" required class="form-control" value='<?php echo $krofna->naziv; ?>' name="naziv">
+                <input type="text" required class="form-control" value='<?php echo $krofna->ime; ?>' name="ime">
                 <label>Kalorije</label>
                 <input type="number" required min="1" max="9" value='<?php echo $krofna->kalorije; ?>'
                     class="form-control" name="kalorije">
@@ -80,7 +80,7 @@ $krofna=$rezultat['kolekcija'][0];
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" 
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+ ></script>
 
 
 
