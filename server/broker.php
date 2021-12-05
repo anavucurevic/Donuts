@@ -3,13 +3,12 @@
 class Broker{
     private $mysqli;
     private static $broker;
-
+  
+       
     private function __construct(){
         $this->mysqli = new mysqli("localhost","root","","krofne");
         $this->mysqli->set_charset("utf8");
     }
-
-
 
     public static function getBroker(){
         if(!isset($broker)){
@@ -17,8 +16,6 @@ class Broker{
         }
         return $broker;
     }
-
-
 
 
 

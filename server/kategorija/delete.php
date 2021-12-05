@@ -10,7 +10,7 @@
             'error'=>'pogresan ID'
         ]);
     }else{
-        echo json_encode($broker->udc('delete from kategroija where id='.$id));
+        echo json_encode($broker->udc('delete from kategorija where id='.$id));
     }
     
     

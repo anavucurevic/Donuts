@@ -5,6 +5,6 @@
     $broker=Broker::getBroker();
   
     
-    echo json_encode($broker->vratiKolekciju('select * from kateg'));
+    echo json_encode($broker->vratiKolekciju('select * from kategorija'));
 
 ?>

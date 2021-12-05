@@ -89,14 +89,14 @@
             const sort = $('#sort').val();
             const imeFilter = $('#nazivFil').val();
             const niz = krofne.filter(element => {
-                return (vrsta == 0 || element.kategorija_id == vrsta) && element.ime.startsWith(imeFilter) 
+                return (vrsta == 0 || element.kategorija_id == vrsta) && element.naziv.startsWith(imeFilter) 
 
                 // proveri ovo ime
             })
             niz.sort((a, b) => {
                 if (sort == 'ASC')
-                    return (a.ime.toLowerCase() > b.ime.toLowerCase()) ? 1 : -1;
-                return (a.ime.toLowerCase() > b.ime.toLowerCase()) ? -1 : 1;
+                    return (a.naziv.toLowerCase() > b.naziv.toLowerCase()) ? 1 : -1;
+                return (a.naziv.toLowerCase() > b.naziv.toLowerCase()) ? -1 : 1;
             });
 
             let red = 0;
