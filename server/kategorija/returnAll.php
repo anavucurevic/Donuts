@@ -1,7 +1,7 @@
-<!-- on komunicira sa brokerom a broker komunicira sa bazom-->class
+
 
 <?php
-    require '../broker.php';     // napravi vezu sa brokerom kada ga napravis 
+    require '../broker.php';  
     $broker=Broker::getBroker();
   
     

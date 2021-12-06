@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -37,7 +38,7 @@
                     <input type="number" required min="0" max="100" class="form-control" name="kalorije">
                     <label>Kategorija</label>
                     <select id='kat' class="form-control" required name='kategorija_id'>
-<!-- ovo za popunjavanje ajax-om ! -->
+
                     </select>
                     <label>Slika</label>
                     <input type="file" required class="form-control" name="slika">
@@ -52,37 +53,31 @@
     </div>
 
     
-    <script src="https://code.jquery.com/jquery-3.6.0.js" 
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
 
 
 
 
 
     <script>
-        $(document).ready(function () {   // prvo se inicijalizuju svi html elementi a posle se izvršava ovo ispod
-         $.getJSON('./server/kategorja/returnAll.php', function (data) {                  // AJAX POZIV -> putanja,fja
-            // kada napravis putanju dodaj posle 
+    $(document).ready(function () {
+        $.getJSON('./server/kategorija/returnAll.php', function (data) {
+            console.log(data);
+            if (!data.status) {
+                alert(data.error);
+                return;
+            }
 
-                console.log(data);    // data je niy svih vrsta koju vraca fja vrati sve 
-                if (!data.status) {
-                    alert(data.error);
-                    return;
-                }
-
-                for (let kateg of data.kolekcija) {
-                    $('#kat').append(`
-                        <option value='${kateg.id}'> ${kateg.naziv} </option>   
-                    `)
-
-                    //u polje sa tagom kat doadjem jednu po jednu kategoriju iy te kolekcije data.kolekcija
-                    // ovom petljom ubacuuemo jednu po jednu kaategoriju u posle kat
-                }
-            })
+            for (let kateg of data.kolekcija) {
+                $('#kat').append(`
+                    <option  value='${kateg.id}'> ${kateg.naziv} </option>
+                `)
+            }
+            $('#kat').val($('#kategorija_id_hidden').val());
         })
-    </script>
+    })
+</script>
 
 </body>
 </html>
 
-<!-- popravi ovo!!! -->

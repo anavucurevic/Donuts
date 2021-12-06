@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 
-    <link rel="stylesheet" href="style.css">
-    <title>Promena</title>
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script>
+
+  src="https://code.jquery.com/jquery-3.6.0.js"
+
+ </script>
+
+ <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 </head>
+
+
 <body>
 <?php
 
@@ -22,7 +36,7 @@ $broker=Broker::getBroker();
 $rezultat=$broker->vratiKolekciju('select * from krofna where id='.$_GET['id']);
 $krofna=$rezultat['kolekcija'][0];
 
-// kod popraviti
+
 ?>
 
 
@@ -55,12 +69,12 @@ $krofna=$rezultat['kolekcija'][0];
     <input type="text" id='kategorija_id_hidden' hidden value='<?php echo $krofna->kategorija_id; ?>'>
     <div class="row mt-2">
         <div class="col-8 bg-light">
-            <form action="./server/krofna/izmeni.php" method="post">
+            <form action="./server/krofna/promeni.php" method="post">
             <input type="text" hidden name='id' value='<?php echo $krofna->id;?>'>     
             <label>Naziv</label>
                 <input type="text" required class="form-control" value='<?php echo $krofna->ime; ?>' name="ime">
                 <label>Kalorije</label>
-                <input type="number" required min="1" max="9" value='<?php echo $krofna->kalorije; ?>'
+                <input type="number" required min="1" max="100" value='<?php echo $krofna->kalorije; ?>'
                     class="form-control" name="kalorije">
                 <label>Kategorija</label>
                 <select id='kat'  class="form-control" required
@@ -79,8 +93,6 @@ $krofna=$rezultat['kolekcija'][0];
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" 
- ></script>
 
 
 
@@ -104,5 +116,7 @@ $krofna=$rezultat['kolekcija'][0];
         })
     })
 </script>
+
+
 </body>
 </html>

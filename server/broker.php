@@ -20,16 +20,16 @@ class Broker{
 
 
     public function vratiKolekciju($upit){
-        $rezultat=$this->mysqli->query($upit);    // prosledjeni upit
-        $response=[];   // prazna kolekcija popunjavam je pomoću fetch_object
+        $rezultat=$this->mysqli->query($upit);    
+        $response=[];   
         if(!$rezultat){
             $response['status']=false;
             $response['error']=$this->mysqli->error;
         }
         else{
             $response['status']=true;
-            while($red=$rezultat->fetch_object()){   // ucitava jedan po jedan red iy baye i ubacuje ga u kolekciju rezultat,
-                $response['kolekcija'][]=$red;// a taj reyultat vra'a kao povratnu vrednost
+            while($red=$rezultat->fetch_object()){  
+                $response['kolekcija'][]=$red;
             }
         }
         return $response;
@@ -37,7 +37,7 @@ class Broker{
 
 
 
-    public function udc($upit){    // update delete change
+    public function udc($upit){    
         $rezultat=$this->mysqli->query($upit);
         $response=[];
         $response['status']=(!$rezultat)?false:true;
