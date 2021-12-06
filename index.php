@@ -50,7 +50,7 @@
         let krofne = [];
         $(document).ready(function () {
             $.getJSON('./server/krofna/returnAll.php', function (data) {
-                console.log("ispis"+data.ob_get_length);
+               
                 if (data.status == 'false') {
                     alert(data.error);
                     return;
