@@ -2,7 +2,7 @@
         <div class="okvir">
             <div class="logo">
                 <a href="#" title="Logo">
-                    <img src="slike/logo1.jpg" alt="Logo restorana" class="img-resp">
+                    <img src="slike/noviLogo.png" alt="Logo restorana" class="img-resp">
                 </a>
             </div>
 

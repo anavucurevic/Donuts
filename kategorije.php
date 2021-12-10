@@ -13,6 +13,17 @@
 
 
 </head>
+
+<style>
+    body {
+     
+       background-image: url('../krofne/slike/poz.jpg');
+       background-size: cover;
+      
+   
+    }
+</style>
+
 <body>
 <?php include 'header.php '; ?>
     <div class='container'>
@@ -36,7 +47,7 @@
                     <label>Naziv kategorije</label>
                     <input type="text" name='naziv' class='form-control'>
                     <label class='text-danger bg-light' <?php echo (!isset($_GET['greska']))?'hidden':''; ?> ><?php echo $_GET['greska']; ?></label>
-                    <button type='submit' class='form-control btn btn-primary mt-2'>Napravi</button>
+                    <button type='submit' class='form-control btn btn-primary mt-2 dugme-pretraga'>Napravi</button>
                 </form>
             </div>
         </div>

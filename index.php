@@ -18,9 +18,19 @@
 
 <?php include 'header.php'; ?>
 
-<div class='container'>
-        <div class="row mt-2">
-            <div class="col-3">
+<style>
+    body {
+     
+       background-image: url('../krofne/slike/poz.jpg');
+       background-size: cover;
+      
+   
+    }
+</style>
+
+<div class="container">
+        <div class=" row mt-2">
+            <div class="col-3 ">
                 <select id='sort' class="form-control">
                     <option value="">Sortiraj po nazivu</option>
                     <option value="ASC">po abecedi</option>
@@ -28,7 +38,7 @@
                 </select>
             </div>
             <div class="col-6">
-                <input type="text" id='nazivFil' class="form-control" placeholder="Filtriraj po nazivu">
+                <input type="text" id='nazivFil' class="form-control " placeholder="Filtriraj po nazivu">
             </div>
             <div class="col-3">
                 <select id='kateg' class="form-control">
@@ -92,7 +102,7 @@
             const niz = krofne.filter(element => {
                 return (kateg == 0 || element.kategorija_id == kateg) && element.ime.startsWith(imeFilter) 
 
-                // proveri ovo ime
+                
             })
             niz.sort((a, b) => {
                 if (sort == 'ASC')
@@ -116,7 +126,7 @@
                             <h4 class='text-center'>${krofna.ime}</h4>
                             <h5 class='text-center'>${krofna.kategorija_naziv}</h5>  
                             
-                           <a href='./promena.php?id=${krofna.id}'> <button class='form-control btn btn-success mb-2'>Vidi</button></a>
+                           <a href='./promena.php?id=${krofna.id}'> <button class='form-control btn btn-success mb-2 dugme-pretraga'>Vidi</button></a>
                         </div>
                     `
                 ) 

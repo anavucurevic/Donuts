@@ -14,7 +14,22 @@
 </head>
 <body>
 
+
+
+<style>
+    body {
+     
+       background-image: url('../krofne/slike/poz.jpg');
+       background-size: cover;
+      
+   
+    }
+</style>
+
 <?php include 'header.php '; ?>
+
+
+
     <div class='container'>
         <div class='row mt-2 '>
             <h1>Napravi svoju novu krofnu!</h1>

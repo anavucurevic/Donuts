@@ -43,8 +43,11 @@ $krofna=$rezultat['kolekcija'][0];
 <body>
 <style>
     body {
-        background-image: url('<?php echo $krofna->slika; ?>') !important;
-        background-size: cover;
+     
+       background-image: url('../krofne/slike/poz.jpg');
+       background-size: cover;
+      
+   
     }
 </style>
 <?php include 'header.php'; ?>
@@ -86,7 +89,7 @@ $krofna=$rezultat['kolekcija'][0];
                 <textarea required name="recept" cols="30" rows="5" class="form-control">
                 <?php echo $krofna->recept; ?>
                 </textarea>
-                <button class="form-control btn btn-primary mt-2 mb-2">Promeni</button>
+                <button class="form-control btn btn-primary mt-2 mb-2 dugme-pretraga ">Promeni</button>
             </form>
         </div>
     </div>
