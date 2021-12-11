@@ -11,7 +11,7 @@ $slika=$_FILES['slika'];
 $recept=$_POST['recept'];
 $nazivSlike=$slika['name'];
 $lokacija = "../../slike/".$nazivSlike;
- // proveriti putanje
+
 
 if(!move_uploaded_file($_FILES['slika']['tmp_name'],$lokacija)){
     $lokacija="";
@@ -20,6 +20,7 @@ if(!move_uploaded_file($_FILES['slika']['tmp_name'],$lokacija)){
 }else{
     
     $lokacija=substr($lokacija,4);
+   
 }
 
 $rezultat=$broker->udc("insert into krofna(ime,kalorije,kategorija_id,slika,recept) values ('".$ime."',".$kalorije.",".$kategorija_id.",'".$lokacija."','".$recept."') ");
@@ -34,3 +35,4 @@ if($rezultat['status']){
 
 
 ?>
+

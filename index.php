@@ -29,7 +29,7 @@
 </style>
 
 <div class="container">
-        <div class=" row mt-2">
+        <div class=" row mt-2 poz">
             <div class="col-3 ">
                 <select id='sort' class="form-control">
                     <option value="">Sortiraj po nazivu</option>
@@ -51,6 +51,8 @@
 
         </div>
     </div>
+
+    <?php include 'footer.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" 
     ></script>
@@ -114,19 +116,19 @@
             let kolona = 0;
             $('#elementi').html(`<div id='row-${red}' class='row mt-2'></div>`)
             for (let krofna of niz) {
-                if (kolona === 3) {
+                if (kolona === 4 ) {
                     kolona = 0;
                     red++;
                     $('#elementi').append(`<div id='row-${red}' class='row mt-2'></div>`)
                 }
                 $(`#row-${red}`).append(
                     `
-                        <div class='col-4 pt-2 bg-light'>
+                        <div class='col-3 pt-2 bg-light'>
                             <img src='${krofna.slika}' width='100%' height='320' />
                             <h4 class='text-center'>${krofna.ime}</h4>
                             <h5 class='text-center'>${krofna.kategorija_naziv}</h5>  
                             
-                           <a href='./promena.php?id=${krofna.id}'> <button class='form-control btn btn-success mb-2 dugme-pretraga'>Vidi</button></a>
+                           <a href='./promena.php?id=${krofna.id}'> <button class='form-control btn-success mb-2 dugme-pretraga'>Vidi</button></a>
                         </div>
                     `
                 ) 

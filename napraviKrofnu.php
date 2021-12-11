@@ -67,7 +67,7 @@
         </div>
     </div>
 
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
 
 
@@ -88,7 +88,7 @@
                     <option  value='${kateg.id}'> ${kateg.naziv} </option>
                 `)
             }
-            $('#kat').val($('#kategorija_id_hidden').val());
+          
         })
     })
 </script>

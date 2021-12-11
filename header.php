@@ -18,7 +18,7 @@
                         <a href="napraviKrofnu.php">Napravi svoju krofnu</a>
                     </li>
                     <li>
-                        <a href="#.php">c</a>
+                        <a href="kalendar.php">c</a>
                     </li>
                 </ul>
 
