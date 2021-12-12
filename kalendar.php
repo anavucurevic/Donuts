@@ -3,7 +3,6 @@
 <?php
 
 
-
 list($iNowYear, $iNowMonth, $iNowDay) = explode('-', date('Y-m-d'));
 
 if (isset($_GET['month'])) {
@@ -87,4 +86,47 @@ echo strtr(file_get_contents('kalendar.html'), $aVariables);
 
 ?>
 
+
+
+
+
+
+
+<html>
+<head>
+<link href="thumbnail.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
 <?php include 'header.php'; ?>
+
+
+
+<style>
+    body {
+     
+       background-image: url('../krofne/slike/poz.jpg');
+       background-size: cover;
+      
+   
+    }
+</style>
+
+<div class="container">
+
+<div class="thumbnail_div">
+<form method="post" action="get_thumbnail.php">
+<input  class="form-control" type="text" name="url" placeholder="Napisite url youtube videa">
+<input class="dugme form-control  " type="submit" name="get_thumbnail" value="PREUZMITE SLIKU SA  YOUTUBE VIDEA">
+</form>
+<br>
+<br>
+
+<?php include 'footer.php'; ?>
+</body>
+</html>
+
