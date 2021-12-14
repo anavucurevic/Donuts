@@ -125,6 +125,9 @@ echo strtr(file_get_contents('kalendar.html'), $aVariables);
 </form>
 <br>
 <br>
+</div>
+</div>
+
 
 <?php include 'footer.php'; ?>
 </body>

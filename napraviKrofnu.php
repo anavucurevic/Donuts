@@ -9,6 +9,8 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    
+    
     <title>Document</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
@@ -66,6 +68,24 @@
             </div>
         </div>
     </div>
+
+
+
+
+    <div class="container">
+<br>
+<br>
+<div class="thumbnail_div">
+<form method="post" action="get_thumbnail.php">
+    <p>Ako nemate ideju koju sliku da uzmete probajte neki thumbnail sa youtuba!</p>
+<input  class="form-control" type="text" name="url" placeholder="Napisite url youtube videa">
+<input class="form-control dugme-pretraga " type="submit" name="get_thumbnail" value="PREUZMITE SLIKU SA  YOUTUBE VIDEA">
+</form>
+<br>
+<br>
+</div>
+</div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>

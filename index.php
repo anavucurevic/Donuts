@@ -124,7 +124,7 @@
                 $(`#row-${red}`).append(
                     `
                         <div class='col-3 pt-2 bg-light'>
-                            <img src='${krofna.slika}' width='100%' height='320' />
+                            <img src='${krofna.slika}' width='100%' height='300' />
                             <h4 class='text-center'>${krofna.ime}</h4>
                             <h5 class='text-center'>${krofna.kategorija_naziv}</h5>  
                             
