@@ -1,4 +1,4 @@
-<section class="meni">
+<section class="meni container ">
         <div class="okvir">
             <div class="logo">
                 <a href="#" title="Logo">
@@ -6,7 +6,7 @@
                 </a>
             </div>
 
-            <div class="meni txtdesno">
+            <div class="meni txtdesno container">
                 <ul>
                     <li>
                         <a href="index.php">Pocetna</a>
@@ -17,9 +17,7 @@
                     <li>
                         <a href="napraviKrofnu.php">Napravi svoju krofnu</a>
                     </li>
-                    <li>
-                        <a href="kalendar.php">Kalendar</a>
-                    </li>
+                   
                 </ul>
 
             </div>
