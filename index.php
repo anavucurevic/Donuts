@@ -37,14 +37,15 @@
                     <option value="DESC">unazad</option>
                 </select>
             </div>
-            <div class="col-6">
-                <input type="text" id='nazivFil' class="form-control " placeholder="Filtriraj po nazivu">
-            </div>
+           
             <div class="col-3">
                 <select id='kateg' class="form-control">
                     <option value="0">Filtriraj po kategoriji</option>
 
                 </select>
+            </div>
+            <div class="col-6">
+                <input type="text" id='nazivFil' class="form-control " placeholder="Filtriraj po nazivu">
             </div>
         </div>
         <div id='elementi'>
